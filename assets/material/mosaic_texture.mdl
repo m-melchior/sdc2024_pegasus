@@ -1,0 +1,65 @@
+mdl 1.6;
+
+import ::anno::*;
+import ::df::*;
+import ::math::*;
+import ::state::*;
+import ::tex::*;
+
+export material MosaicTexture(
+    uniform texture_2d tag_mosaic = texture_2d("" ,::tex::gamma_srgb)
+	[[
+		anno::display_name("Mosaic_texture"),
+		anno::description("Texture containing tags"),
+		anno::in_group("Tag")
+	]],
+
+	int tag_size = int(10)
+    [[
+		anno::display_name("Tag_Size"),
+		anno::description("Tag size in pixels"),
+		anno::in_group("Tag")
+	]],
+    
+	int tags_per_row = int(10)
+    [[
+		anno::display_name("Tags_Per_Row"),
+		anno::description("Number of tags per row in texture"),
+		anno::in_group("Tag")
+	]],
+    
+	int tag_spacing = int(1)
+    [[
+		anno::display_name("Spacing"),
+		anno::description("Spacing between tags in pixels"),
+		anno::in_group("Tag")
+	]],
+    
+	int tag_id = int(0)
+    [[
+		anno::display_name("Tag_ID"),
+		anno::description("Linear index of tag"),
+		anno::in_group("Tag")
+	]]
+)
+= let {
+	float3 coords_texture = state::texture_coordinate(0);
+	int offset_x = tag_id % tags_per_row;
+	int offset_y = tag_id / tags_per_row;
+	
+	int rows = tex::height(tag_mosaic) / (tag_size + tag_spacing);
+} in material(
+    surface: material_surface(
+        scattering: df::diffuse_reflection_bsdf(
+            tint: color(
+				tex::texel_color(
+					tag_mosaic,
+					int2(
+							int(coords_texture.x * tag_size) + offset_x * (tag_size + tag_spacing), 
+							int(coords_texture.y * tag_size) + rows * (tag_size + tag_spacing) - offset_y * (tag_size + tag_spacing) 
+					)
+				)
+			)
+        )
+    )
+);

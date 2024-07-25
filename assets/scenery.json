@@ -1,0 +1,50 @@
+{
+	"materials": [
+		["/Looks/wall", "/assets/material/wall.png"],
+		["/Looks/doors", "/assets/material/doors.png"],
+		["/Looks/floor", "/assets/material/floor.png"]
+	],
+
+	"objects": [
+		["FixedCuboid", "/World/Scenery/floor",  	["LENGTH_ARENA / 2", 0, -0.05], 																					["LENGTH_ARENA + 2", "WIDTH_ARENA * 2 + 2", 0.1], 	"/Looks/floor"],
+
+		["FixedCuboid", "/World/Scenery/wall_0", 	[0, 0, "HEIGHT_WALL / 2"], 																							[0.1, "WIDTH_ARENA * 2 + 2", "HEIGHT_WALL"], 		"/Looks/wall"],
+		["FixedCuboid", "/World/Scenery/wall_1", 	["LENGTH_ARENA / 2", "WIDTH_ARENA", "HEIGHT_WALL / 2"], 															["LENGTH_ARENA + 2", 0.1, "HEIGHT_WALL"], 			"/Looks/wall"],
+		["FixedCuboid", "/World/Scenery/wall_2", 	["LENGTH_ARENA", 0, "HEIGHT_WALL / 2"], 																			[0.1, "WIDTH_ARENA * 2 + 2", "HEIGHT_WALL"], 		"/Looks/wall"],
+		["FixedCuboid", "/World/Scenery/wall_3", 	["LENGTH_ARENA / 2", "-WIDTH_ARENA", "HEIGHT_WALL / 2"], 															["LENGTH_ARENA + 2", 0.1, "HEIGHT_WALL"], 			"/Looks/doors"],
+
+		["FixedCuboid", "/World/Scenery/pillar_1", 	["DIST_PILLAR_X * 0 + SIZE_PILLAR / 2", "DIST_PILLAR_Y * 0", "HEIGHT_WALL / 2"], 									["SIZE_PILLAR", "SIZE_PILLAR", "HEIGHT_WALL"], 		"/Looks/floor"],
+		["FixedCuboid", "/World/Scenery/pillar_2", 	["DIST_PILLAR_X * 0 + SIZE_PILLAR / 2", "DIST_PILLAR_Y * 1", "HEIGHT_WALL / 2"], 									["SIZE_PILLAR", "SIZE_PILLAR", "HEIGHT_WALL"], 		"/Looks/floor"],
+		["FixedCuboid", "/World/Scenery/pillar_3", 	["DIST_PILLAR_X * 0 + SIZE_PILLAR / 2", "DIST_PILLAR_Y * 2", "HEIGHT_WALL / 2"], 									["SIZE_PILLAR", "SIZE_PILLAR", "HEIGHT_WALL"], 		"/Looks/floor"],
+
+		["FixedCuboid", "/World/Scenery/pillar_4", 	["DIST_PILLAR_X * 0 + SIZE_PILLAR / 2", "WIDTH_ARENA - SIZE_PILLAR / 2", "HEIGHT_WALL / 2"], 						["SIZE_PILLAR", "SIZE_PILLAR", "HEIGHT_WALL"], 		"/Looks/floor"],
+		["FixedCuboid", "/World/Scenery/pillar_5", 	["DIST_PILLAR_X * 1 + SIZE_PILLAR / 2", "WIDTH_ARENA - SIZE_PILLAR / 2", "HEIGHT_WALL / 2"], 						["SIZE_PILLAR", "SIZE_PILLAR", "HEIGHT_WALL"], 		"/Looks/floor"],
+		["FixedCuboid", "/World/Scenery/pillar_6", 	["DIST_PILLAR_X * 2 + SIZE_PILLAR / 2", "WIDTH_ARENA - SIZE_PILLAR / 2", "HEIGHT_WALL / 2"], 						["SIZE_PILLAR", "SIZE_PILLAR", "HEIGHT_WALL"], 		"/Looks/floor"],
+		["FixedCuboid", "/World/Scenery/pillar_7", 	["DIST_PILLAR_X * 3 + SIZE_PILLAR / 2", "WIDTH_ARENA - SIZE_PILLAR / 2", "HEIGHT_WALL / 2"], 						["SIZE_PILLAR", "SIZE_PILLAR", "HEIGHT_WALL"], 		"/Looks/floor"],
+		["FixedCuboid", "/World/Scenery/pillar_8", 	["DIST_PILLAR_X * 4 + SIZE_PILLAR / 2", "WIDTH_ARENA - SIZE_PILLAR / 2", "HEIGHT_WALL / 2"], 						["SIZE_PILLAR", "SIZE_PILLAR", "HEIGHT_WALL"], 		"/Looks/floor"],
+		["FixedCuboid", "/World/Scenery/pillar_9", 	["LENGTH_ARENA - SIZE_PILLAR / 2", "WIDTH_ARENA - SIZE_PILLAR / 2", "HEIGHT_WALL / 2"], 							["SIZE_PILLAR", "SIZE_PILLAR", "HEIGHT_WALL"], 		"/Looks/floor"],
+
+		["FixedCuboid", "/World/Scenery/pillar_10", ["LENGTH_ARENA - SIZE_PILLAR / 2", "DIST_PILLAR_Y * 2", "HEIGHT_WALL / 2"], 										["SIZE_PILLAR", "SIZE_PILLAR", "HEIGHT_WALL"], 		"/Looks/floor"],
+		["FixedCuboid", "/World/Scenery/pillar_11", ["LENGTH_ARENA - SIZE_PILLAR / 2", "DIST_PILLAR_Y * 1", "HEIGHT_WALL / 2"], 										["SIZE_PILLAR", "SIZE_PILLAR", "HEIGHT_WALL"], 		"/Looks/floor"],
+		["FixedCuboid", "/World/Scenery/pillar_12", ["LENGTH_ARENA - SIZE_PILLAR / 2", "DIST_PILLAR_Y * 0", "HEIGHT_WALL / 2"], 										["SIZE_PILLAR", "SIZE_PILLAR", "HEIGHT_WALL"], 		"/Looks/floor"],
+
+		["FixedCuboid", "/World/Scenery/box_1", 	["DIST_PILLAR_X * 1 + SIZE_PILLAR / 2", "DIST_PILLAR_Y * 1", "HEIGHT_BOX / 2"], 									["WIDTH_BOX", "LENGTH_BOX", "HEIGHT_BOX"], 	[0, 0, 0]],
+		["FixedCuboid", "/World/Scenery/lid_box_1", ["DIST_PILLAR_X * 1 + SIZE_PILLAR / 2 - WIDTH_BOX / 2", "DIST_PILLAR_Y * 1", "HEIGHT_BOX + WIDTH_BOX / 2"], 		[0.01, "LENGTH_BOX", "WIDTH_BOX"], 			[0, 0, 0]],
+
+		["FixedCuboid", "/World/Scenery/box_2", 	["DIST_PILLAR_X * 0.5 + SIZE_PILLAR / 2", "DIST_PILLAR_Y * 1.5", "HEIGHT_BOX / 2"], 								["WIDTH_BOX", "LENGTH_BOX", "HEIGHT_BOX"], 	[0, 0, 0]],
+		["FixedCuboid", "/World/Scenery/lid_box_2", ["DIST_PILLAR_X * 0.5 + SIZE_PILLAR / 2 - WIDTH_BOX / 2", "DIST_PILLAR_Y * 1.5", "HEIGHT_BOX + WIDTH_BOX / 2"], 	[0.01, "LENGTH_BOX", "WIDTH_BOX"], 			[0, 0, 0]],
+
+		["FixedCuboid", "/World/Scenery/box_3", 	["DIST_PILLAR_X * 1 + SIZE_PILLAR / 2", "DIST_PILLAR_Y * 2", "HEIGHT_BOX / 2"], 									["WIDTH_BOX", "LENGTH_BOX", "HEIGHT_BOX"], 	[0, 0, 0]],
+		["FixedCuboid", "/World/Scenery/lid_box_3", ["DIST_PILLAR_X * 1 + SIZE_PILLAR / 2 - WIDTH_BOX / 2", "DIST_PILLAR_Y * 2", "HEIGHT_BOX + WIDTH_BOX / 2"], 		[0.01, "LENGTH_BOX", "WIDTH_BOX"], 			[0, 0, 0]],
+
+
+		["FixedCuboid", "/World/Scenery/box_4", 	["DIST_PILLAR_X * 4 + SIZE_PILLAR / 2", "DIST_PILLAR_Y * 2", "HEIGHT_BOX / 2"], 									["WIDTH_BOX", "LENGTH_BOX", "HEIGHT_BOX"], 	[0, 0, 0]],
+		["FixedCuboid", "/World/Scenery/lid_box_4", ["DIST_PILLAR_X * 4 + SIZE_PILLAR / 2 + WIDTH_BOX / 2", "DIST_PILLAR_Y * 2", "HEIGHT_BOX + WIDTH_BOX / 2"], 		[0.01, "LENGTH_BOX", "WIDTH_BOX"], 			[0, 0, 0]],
+
+		["FixedCuboid", "/World/Scenery/box_5", 	["DIST_PILLAR_X * 4.5 + SIZE_PILLAR / 2", "DIST_PILLAR_Y * 1.5", "HEIGHT_BOX / 2"], 								["WIDTH_BOX", "LENGTH_BOX", "HEIGHT_BOX"], 	[0, 0, 0]],
+		["FixedCuboid", "/World/Scenery/lid_box_5", ["DIST_PILLAR_X * 4.5 + SIZE_PILLAR / 2 + WIDTH_BOX / 2", "DIST_PILLAR_Y * 1.5", "HEIGHT_BOX + WIDTH_BOX / 2"], 	[0.01, "LENGTH_BOX", "WIDTH_BOX"], 			[0, 0, 0]],
+
+		["FixedCuboid", "/World/Scenery/box_6", 	["DIST_PILLAR_X * 4 + SIZE_PILLAR / 2", "DIST_PILLAR_Y * 1", "HEIGHT_BOX / 2"], 									["WIDTH_BOX", "LENGTH_BOX", "HEIGHT_BOX"], 	[0, 0, 0]],
+		["FixedCuboid", "/World/Scenery/lid_box_6", ["DIST_PILLAR_X * 4 + SIZE_PILLAR / 2 + WIDTH_BOX / 2", "DIST_PILLAR_Y * 1", "HEIGHT_BOX + WIDTH_BOX / 2"], 		[0.01, "LENGTH_BOX", "WIDTH_BOX"], 			[0, 0, 0]]
+	]
+}
